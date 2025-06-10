@@ -1,70 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranga Sai Shreyas - Portfolio</title>
-    <link rel="stylesheet" href="Myportfolio.css">
-    <style>
-        /* Optional styling improvements */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill {
-            background-color: #f2f2f2;
-            padding: 8px 12px;
-            border-radius: 5px;
-        }
-        .social-links a {
-            margin-right: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranga Sai Shreyas - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1cb3e6;
+      --bg-light: #f7f9fc;
+      --bg-dark: #0f172a;
+      --text-dark: #1e293b;
+      --text-light: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: linear-gradient(to bottom right, #e6f7ff, #ffffff);
+      padding: 0 1rem;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+
+    .contact-info p, .contact-info a {
+      color: #f0f9ff;
+      font-size: 0.95rem;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #ffffff;
+    }
+
+    nav.social-links {
+      margin-top: 1rem;
+    }
+
+    nav.social-links a {
+      background: white;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    nav.social-links a:hover {
+      background-color: #e0f7ff;
+      transform: scale(1.05);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background-color: #e6f3ff;
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+
+    .skill:hover {
+      background-color: var(--primary);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: var(--bg-dark);
+        color: var(--text-light);
+      }
+
+      header {
+        background-color: #0ea5e9;
+        color: white;
+      }
+
+      .contact-info a,
+      nav.social-links a {
+        color: white;
+      }
+
+      nav.social-links a {
+        background-color: #1e40af;
+        color: white;
+      }
+
+      nav.social-links a:hover {
+        background-color: #3b82f6;
+      }
+
+      main {
+        background-color: #1e293b;
+      }
+
+      .skill {
+        background-color: #334155;
+        color: #cbd5e1;
+      }
+
+      .skill:hover {
+        background-color: #3b82f6;
+        color: white;
+      }
+
+      section h2 {
+        color: #60a5fa;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Ranga Sai Shreyas</h1>
-        <p class="subtitle">Engineering Student</p>
-        <address class="contact-info">
-            <p>Email: <a href="mailto:rangasaishreyas7@gmail.com">rangasaishreyas7@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919676495807">9676495807</a></p>
-        </address>
-        <nav class="social-links">
-            <a href="https://www.linkedin.com/in/ranga-sai-shreyas-405b06320?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZUwbEm8TRG%2Bbs9u27pSFZw%3D%3D" aria-label="Visit LinkedIn profile">LinkedIn</a>
-            <a href="https://github.com/shreyas259" aria-label="Visit GitHub profile">GitHub</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Ranga Sai Shreyas</h1>
+    <p class="subtitle">Engineering Student</p>
+    <address class="contact-info">
+      <p>Email: <a href="mailto:rangasaishreyas7@gmail.com">rangasaishreyas7@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919676495807">9676495807</a></p>
+    </address>
+    <nav class="social-links">
+      <a href="https://www.linkedin.com/in/ranga-sai-shreyas-405b06320?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZUwbEm8TRG%2Bbs9u27pSFZw%3D%3D" aria-label="Visit LinkedIn profile">LinkedIn</a>
+      <a href="https://github.com/shreyas259" aria-label="Visit GitHub profile">GitHub</a>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h2>About</h2>
-            <p>Heyy! I'm Ranga Sai Shreyas, a passionate computer science student with a focus on creating efficient and user-friendly applications. I'm constantly learning and expanding my skill set in the ever-evolving field of technology.</p>
-        </section>
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>Heyy! I'm Ranga Sai Shreyas, a passionate computer science student with a focus on creating efficient and user-friendly applications. I'm constantly learning and expanding my skill set in the ever-evolving field of technology.</p>
+    </section>
 
-        <section>
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="skill">Python</div>
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">Java</div>
-            </div>
-        </section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Java</div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Projects</h2>
-            <p>Check out my GitHub repository for my latest projects:</p>
-            <div class="social-links">
-                <a href="https://github.com/shreyas259" aria-label="View Ranga Sai Shreyas's projects on GitHub">View My Projects</a>
-            </div>
-        </section>
+    <section>
+      <h2>Projects</h2>
+      <p>Check out my GitHub repository for my latest projects:</p>
+      <div class="social-links">
+        <a href="https://github.com/shreyas259" aria-label="View Ranga Sai Shreyas's projects on GitHub">View My Projects</a>
+      </div>
+    </section>
 
-        <section>
-            <h2>Education</h2>
-            <p>Computer Science Engineering</p>
-        </section>
-    </main>
-
+    <section>
+      <h2>Education</h2>
+      <p>Computer Science Engineering</p>
+    </section>
+  </main>
 </body>
 </html>
